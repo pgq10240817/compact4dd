@@ -31,7 +31,7 @@ dependencies {
     compile 'com.makeramen:roundedimageview:2.2.1'
     compile 'jp.wasabeef:glide-transformations:2.0.1'
 
-    compile project(':compact4dd:navigationbar')
+    compile 'com.github.pgq10240817:ddnavigationbar:v0.0.1'
 
     testCompile 'junit:junit:4.12'
 
