@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Widget.NavigationBar" parent="android:Widget">
+        <item name="android:background">?attr/navigationBarColorPrimary</item>
+        <item name="navigationBarTitleTextStyle">@style/TextAppearance.NavigationBar.Title</item>
+        <item name="navigationBarDisplayOptions">displayShowTitle</item>
+        <item name="navigationTextStyle">@style/TextAppearance.NavigationBar.Navigation</item>
+    </style>
+
+    <style name="TextAppearance.NavigationBar.Title" parent="android:TextAppearance">
+        <item name="android:textColor">?attr/navigationBarTextColorPrimary</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="TextAppearance.NavigationBar.Navigation" parent="android:TextAppearance">
+        <item name="android:textColor">?attr/navigationBarColorAccent</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="Widget.NavigationDropDown" parent="android:Widget.Spinner.DropDown">
+        <item name="android:dropDownWidth">150dp</item>
+        <item name="android:background">@drawable/list_navigation_background</item>
+        <item name="android:dropDownSelector">@drawable/navigation_list_selector</item>
+        <item name="android:dropDownVerticalOffset">1px</item>
+        <item name="android:listSelector">@drawable/navigation_list_selector</item>
+        <item name="android:popupBackground">@drawable/navigation_list_dropdown_background</item>
+    </style>
+
+    <style name="Widget.NavigationDropDown.Light">
+        <item name="android:popupBackground">@drawable/navigation_list_dropdown_background_light
+        </item>
+    </style>
+
+
+</resources>
