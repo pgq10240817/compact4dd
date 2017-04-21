@@ -1,2 +1,2 @@
 configurations.maybeCreate("default")
-artifacts.add("default", file('ddcompact.aar'))
+artifacts.add("default", file('DDMain-debug.aar'))
