@@ -23,7 +23,7 @@ android {
     buildToolsVersion '24.0.0'
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 14
         targetSdkVersion 20
         versionCode 1
         versionName "1.0"
@@ -52,6 +52,7 @@ dependencies {
     compile 'jp.wasabeef:glide-transformations:2.0.1'
 
     compile 'com.github.pgq10240817:ddnavigationbar:v0.0.1'
+//    compile project(':compact4dd:ddmain')
 
     testCompile 'junit:junit:4.12'
 
