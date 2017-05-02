@@ -9,8 +9,8 @@ import android.content.Intent;
  */
 
 public class BaseNofifier implements INotifier {
-    private Context             context;
-    private NotificationManager notificationManager;
+    protected Context             context;
+    protected NotificationManager notificationManager;
 
     public BaseNofifier(Context context) {
         this.context = context;
@@ -33,6 +33,11 @@ public class BaseNofifier implements INotifier {
 
     }
 
+
+    @Override
+    public NotificationManager getNotificationManager() {
+        return notificationManager;
+    }
 
     @Override
     public Context getContext() {

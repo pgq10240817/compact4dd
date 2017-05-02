@@ -1,5 +1,6 @@
 package jd.dd.waiter.ddinterface;
 
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 
@@ -10,14 +11,15 @@ public interface INotifier {
     int ID_UNREAD_MSG   = 1000;
     int ID_NOTIFY_MSG   = 2000;
 
+    NotificationManager getNotificationManager();
 
-    public void notify(final String uid, final int id, final String title, final String message, final long unreadMsgCount, Intent optionalIntent);
+    Context getContext();
 
-    public void cancel(final int id);
+    void notify(final String uid, final int id, final String title, final String message, final long unreadMsgCount, Intent optionalIntent);
 
-    public void cancelAll();
+    void cancel(final int id);
 
+    void cancelAll();
 
-    public Context getContext();
 
 }
