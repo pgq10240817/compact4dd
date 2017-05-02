@@ -1,10 +1,7 @@
 package jd.dd.waiter.ddinterface;
 
-import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
-import android.media.MediaPlayer;
-import android.os.Vibrator;
 
 
 public interface INotifier {
@@ -12,8 +9,6 @@ public interface INotifier {
     int ID_NOTIFICATION = 580;
     int ID_UNREAD_MSG   = 1000;
     int ID_NOTIFY_MSG   = 2000;
-
-    NotificationManager getNotificationManager();
 
     Context getContext();
 
@@ -24,13 +19,21 @@ public interface INotifier {
      */
     long minDurationSinceLastNotify();
 
-    boolean handleVoiceAndVibrator(MediaPlayer player, Vibrator vibrator);
+    /**
+     * 声音&震动
+     */
+    void playSoundAndVibrator();
+
+    /**
+     * 弹出通知栏消息
+     *
+     * @param uid
+     * @param id
+     * @param title
+     * @param message
+     * @param unreadMsgCount
+     * @param optionalIntent
+     */
 
     void notify(final String uid, final int id, final String title, final String message, final long unreadMsgCount, Intent optionalIntent);
-
-    void cancel(final int id);
-
-    void cancelAll();
-
-
 }
