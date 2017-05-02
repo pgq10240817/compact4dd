@@ -3,6 +3,8 @@ package jd.dd.waiter.ddinterface;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.os.Vibrator;
 
 /**
  * Created by pugq on 2017/5/2/002.
@@ -42,5 +44,15 @@ public class BaseNofifier implements INotifier {
     @Override
     public Context getContext() {
         return context;
+    }
+
+    @Override
+    public long minDurationSinceLastNotify() {
+        return 3000;
+    }
+
+    @Override
+    public boolean handleVoiceAndVibrator(MediaPlayer player, Vibrator vibrator) {
+        return false;
     }
 }

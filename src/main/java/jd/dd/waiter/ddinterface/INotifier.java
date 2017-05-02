@@ -3,6 +3,8 @@ package jd.dd.waiter.ddinterface;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.os.Vibrator;
 
 
 public interface INotifier {
@@ -14,6 +16,15 @@ public interface INotifier {
     NotificationManager getNotificationManager();
 
     Context getContext();
+
+    /**
+     * 最小不重复震动/声音时间, 毫秒级
+     *
+     * @return
+     */
+    long minDurationSinceLastNotify();
+
+    boolean handleVoiceAndVibrator(MediaPlayer player, Vibrator vibrator);
 
     void notify(final String uid, final int id, final String title, final String message, final long unreadMsgCount, Intent optionalIntent);
 
