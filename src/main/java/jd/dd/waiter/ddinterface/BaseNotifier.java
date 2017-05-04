@@ -46,12 +46,4 @@ public class BaseNotifier implements INotifier {
         return context;
     }
 
-    @Override
-    public long minDurationSinceLastNotify() {
-        return 3000;
-    }
-
-    @Override
-    public void playSoundAndVibrator() {
-    }
 }

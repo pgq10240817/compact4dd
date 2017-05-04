@@ -11,31 +11,16 @@ public interface INotifier {
     int ID_UNREAD_MSG   = 1000;
     int ID_NOTIFY_MSG   = 2000;
 
-    NotificationManager getNotificationManager();
-
-    Context getContext();
 
     /**
-     * 最小不重复震动/声音时间, 毫秒级
+     * 新消息驾到
      *
-     * @return
-     */
-    long minDurationSinceLastNotify();
-
-    /**
-     * 声音&震动
-     */
-    void playSoundAndVibrator();
-
-    /**
-     * 弹出通知栏消息
-     *
-     * @param uid
+     * @param uid            - 可以理解为pin
      * @param id
      * @param title
      * @param message
-     * @param unreadMsgCount
-     * @param optionalIntent
+     * @param unreadMsgCount - pin对应的未读消息数
+     * @param optionalIntent - 占坑
      */
 
     void notify(final String uid, final int id, final String title, final String message, final long unreadMsgCount, Intent optionalIntent);
@@ -44,5 +29,8 @@ public interface INotifier {
 
     void cancelAll();
 
+    NotificationManager getNotificationManager();
+
+    Context getContext();
 
 }
