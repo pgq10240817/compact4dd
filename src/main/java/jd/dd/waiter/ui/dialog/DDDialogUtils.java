@@ -7,7 +7,7 @@ import android.content.Context;
  */
 
 public class DDDialogUtils {
-    public static void showForceLogoutDialog(Context context, Object userInfo, String msg) {
 
+    public static void showForceLogoutDialog(Context context, Object object, String msg) {
     }
 }
